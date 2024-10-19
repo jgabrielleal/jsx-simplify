@@ -32,8 +32,6 @@ return (
 
 <details>
     <summary>Condition e ConditionError</summary>
-    ### Condition
-
     `Componente Condition` é utilizado para renderizar elementos JSX com base em uma expressão. Ele aceita a seguinte propriedade:
 
     - `condition` (obrigatório): Uma expressão booleana que determina se o conteúdo dentro de `Condition`  deve ser renderizado.
@@ -64,8 +62,6 @@ return (
 
 <details>
     <summary>Loop</summary>
-    ### Loop
-
     `Componente Loop` é utilizado para renderizar uma lista de elementos JSX com base em um array. Ele aceita as seguintes propriedades:
 
     - `items` (obrigatório): Um array onde os items serão iterados e renderizados.
