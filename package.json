@@ -1,0 +1,17 @@
+{
+  "name": "jsx-simplify",
+  "version": "1.0.0",
+  "description": "JSX Simplify é uma biblioteca para React que deixa o JSX mais simples de escrever e ler.",
+  "main": "index.tsx",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgabrielleal/jsx-simplify.git"
+  },
+  "author": "João Gabriel dos Anjos Leal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgabrielleal/jsx-simplify/issues"
+  },
+  "homepage": "https://github.com/jgabrielleal/jsx-simplify#readme"
+}
