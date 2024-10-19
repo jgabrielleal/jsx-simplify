@@ -31,60 +31,64 @@ return (
 ## Componentes
 
 <details>
-    <summary>Condition e ConditionError</summary>
-    `Componente Condition` é utilizado para renderizar elementos JSX com base em uma expressão. Ele aceita a seguinte propriedade:
+<summary>Condition e ConditionError</summary>
 
-    - `condition` (obrigatório): Uma expressão booleana que determina se o conteúdo dentro de `Condition`  deve ser renderizado.
+`Componente Condition` é utilizado para renderizar elementos JSX com base em uma expressão. Ele aceita a seguinte propriedade:
 
-    `Componente ConditionError` é utilizado para renderizar elementos JSX quando a expressão booleana do componente `Condition` falha. Ele é usado em conjunto com o `Condition` para fornecer uma alternativa de renderização.
+- `condition` (obrigatório): Uma expressão booleana que determina se o conteúdo dentro de `Condition`  deve ser renderizado.
 
-    #### Exemplo de uso:
+`Componente ConditionError` é utilizado para renderizar elementos JSX quando a expressão booleana do componente `Condition` falha. Ele é usado em conjunto com o `Condition` para fornecer uma alternativa de renderização.
 
-    ```javascript
-    import { Condition, ConditionError } from 'jsx-simplify';
+#### Exemplo de uso:
 
-    const isLoggedIn = false;
+```javascript
+import { Condition, ConditionError } from 'jsx-simplify';
 
-    return (
-        <>
-            <Condition condition={isLoggedIn}>
-                <p>Bem-vindo, usuário!</p>
-            </Condition>
-            <ConditionError>
-                <p>Por favor, faça login para continuar.</p>
-            </ConditionError>
-        </>
-    );
-    ```
+const isLoggedIn = false;
 
-    No exemplo acima, o parágrafo "Por favor, faça login para continuar." será renderizado apenas se a variável `isLoggedIn` for `false`.
+return (
+    <>
+        <Condition condition={isLoggedIn}>
+            <p>Bem-vindo, usuário!</p>
+        </Condition>
+        <ConditionError>
+            <p>Por favor, faça login para continuar.</p>
+        </ConditionError>
+    </>
+);
+```
+
+No exemplo acima, o parágrafo "Por favor, faça login para continuar." será renderizado apenas se a variável `isLoggedIn` for `false`.
+
 </details>
 
 <details>
-    <summary>Loop</summary>
-    `Componente Loop` é utilizado para renderizar uma lista de elementos JSX com base em um array. Ele aceita as seguintes propriedades:
+<summary>Loop</summary>
 
-    - `items` (obrigatório): Um array onde os items serão iterados e renderizados.
+`Componente Loop` é utilizado para renderizar uma lista de elementos JSX com base em um array. Ele aceita as seguintes propriedades:
 
-    #### Exemplo de uso:
+- `items` (obrigatório): Um array onde os items serão iterados e renderizados.
 
-    ```javascript
-    import { Loop } from 'jsx-simplify';
+#### Exemplo de uso:
 
-    const users = [
-        { id: 1, name: 'Alice' },
-        { id: 2, name: 'Bob' },
-        { id: 3, name: 'Charlie' }
-    ];
+```javascript
+import { Loop } from 'jsx-simplify';
 
-    return (
-        <Loop items={users}>
-            {(item, index)=>(
-                <li key={index}>{item.name}</li>
-            )}
-        </Loop>
-    );
-    ```
+const users = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Charlie' }
+];
 
-    No exemplo acima, um parágrafo será renderizado para cada usuário na coleção `users`, exibindo o nome de cada um.
+return (
+    <Loop items={users}>
+        {(item, index)=>(
+            <li key={index}>{item.name}</li>
+        )}
+    </Loop>
+);
+```
+
+No exemplo acima, um parágrafo será renderizado para cada usuário na coleção `users`, exibindo o nome de cada um.
+
 </details>
