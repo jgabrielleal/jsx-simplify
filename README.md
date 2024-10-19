@@ -62,7 +62,11 @@ return (
 
 No exemplo acima, o parágrafo "Por favor, faça login para continuar." será renderizado apenas se a variável `isLoggedIn` for `false`.
 
+###
+
 </details>
+
+###
 
 <details>
 <summary>Loop</summary>
@@ -94,5 +98,7 @@ return (
 ```
 
 No exemplo acima, um parágrafo será renderizado para cada usuário na coleção `users`, exibindo o nome de cada um.
+
+###
 
 </details>
