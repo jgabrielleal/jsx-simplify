@@ -6,7 +6,7 @@ export function Loop<T>({ items, children }: LoopTypes<T>) {
         <>
             {items.map((item, index) => (
                 <React.Fragment key={index}>
-                    {children(item)}
+                    {children(item, index)}
                 </React.Fragment>
             ))}
         </>

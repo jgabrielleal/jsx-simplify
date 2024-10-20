@@ -2,5 +2,5 @@ import { ReactNode } from 'react';
 
 export interface LoopTypes<T> {
     items: T[];
-    children: (item: T) => ReactNode;
+    children: (item: T, index: number) => ReactNode;
 }

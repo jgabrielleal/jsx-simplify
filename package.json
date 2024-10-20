@@ -1,6 +1,6 @@
 {
   "name": "jsx-simplify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSX Simplify é uma biblioteca para React que deixa o JSX mais simples de escrever e ler.",
   "main": "index.tsx",
   "type": "module",
