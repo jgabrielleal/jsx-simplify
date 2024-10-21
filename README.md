@@ -37,7 +37,7 @@ return (
 
 `Componente Condition` é utilizado para renderizar elementos JSX com base em uma expressão. Ele aceita a seguinte propriedade:
 
-- `condition` (obrigatório): Uma expressão booleana que determina se o conteúdo dentro de `Condition`  deve ser renderizado.
+- `condition` (obrigatório): Valor ou expressão a ser testada em uma condicional 
 
 `Componente ConditionError` é utilizado para renderizar elementos JSX quando a expressão booleana do componente `Condition` falha. Ele é usado em conjunto com o `Condition` para fornecer uma alternativa de renderização.
 
@@ -100,5 +100,41 @@ return (
 No exemplo acima, um parágrafo será renderizado para cada usuário na coleção `users`, exibindo o nome de cada um.
 
 ###
+
+</details>
+
+<details>
+<summary>Filter</summary>
+
+### 
+
+`Componente Filter` é utilizado para renderizar uma lista de elementos JSX com base em um array filtrado. Ele aceita as seguintes propriedades:
+
+- `items` (obrigatório): Um array onde os itens serão filtrados e renderizados.
+`condition` (obrigatório): Condição que cada item deve atender para ser incluído na renderização final.
+
+#### Exemplo de uso:
+
+```javascript
+import { Filter } from 'jsx-simplify';
+
+const users = [
+    { id: 1, name: 'Alice', active: true },
+    { id: 2, name: 'Bob', active: false },
+    { id: 3, name: 'Charlie', active: true }
+];
+
+return (
+    <Filter items={users} condition={active === true}>
+        {(item, index) => (
+            <li key={index}>{item.name}</li>
+        )}
+    </Filter>
+);
+```
+
+No exemplo acima, apenas os usuários ativos (onde `active` é `true`) serão renderizados na lista.
+
+### 
 
 </details>
